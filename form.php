@@ -19,14 +19,15 @@
                     alt="logo-lanchonete">
             </div>
             <div class="row">
-                <form action="index.php" method="POST"></form>
+                <form action="index.php" method="POST">
                     <h2>faz o cadastro aí</h2>
                     <input placeholder="Nome" type="text" name="user"><br><br>
                     <input placeholder="Senha" type="password" name="password"><br><br>
                     <input type="submit" class="btn btn-primary">
+                </form>
             </div>
         </div>
-        </form>
+        
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
