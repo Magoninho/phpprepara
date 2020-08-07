@@ -14,12 +14,12 @@
 
             $user = $_POST["user"];
             $password = $_POST["password"];
-            $connect = mysqli_connect("localhost", "root", "");
-            $db = mysqli_select_db(mysqli $connect, "cadastros");
-            $busca = mysqli_query("SELECT usuarios FROM cadastros WHERE usuarios = '$user'");
-            $query_insert = mysqli_query("INSERT INTO usuarios (nome, senha) VALUES ('$user', '$password')", $connect);
+            $connect = mysqli_connect("localhost", "root", "", "cadastros");
+            $busca = mysqli_query($connect, "SELECT usuarios FROM cadastros WHERE usuarios = '$user'");
+            $query_insert = mysqli_query($connect, "INSERT INTO usuarios (nome, senha) VALUES ('$user', '$password')");
+
             if ($query_insert) {
-                echo "deu certo eu acho";
+                echo "parabens vc foi registrado com sucesso";
             }
 
         ?>
